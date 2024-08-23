@@ -74,7 +74,7 @@ const AddCourse = () => {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white text-sm font-semibold p-2 rounded-sm w-32 mx-auto"
+          className="bg-blue-600 text-white text-sm font-semibold p-2 rounded-sm w-32 mx-auto hover:bg-blue-400"
         >
           Add Course
         </button>

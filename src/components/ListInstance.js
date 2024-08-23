@@ -77,7 +77,7 @@ const ListInstance = () => {
         />
         <button
           onClick={fetchInstances}
-          className="bg-blue-600 text-white text-sm font-semibold p-1 rounded-sm px-3 mx-2"
+          className="bg-blue-600 text-white text-sm font-semibold p-1 rounded-sm px-3 mx-2 hover:bg-blue-400"
         >
           List Instances
         </button>
@@ -123,7 +123,13 @@ const ListInstance = () => {
       )}
 
       {instanceDetails && (
-        <div className="absolute z-50 md:left-[600px] flex flex-col items-start border border-gray-400 rounded-md shadow-lg px-10">
+        <div className="absolute z-50 md:left-[450px] flex flex-col items-start border border-gray-400 bg-white rounded-md shadow-lg p-4">
+          <button
+            className="text-white bg-red-600 p-1 rounded-md"
+            onClick={() => setInstanceDetails(null)}
+          >
+            Close
+          </button>
           <h3>Instance Details</h3>
           <p>Course Title: {instanceDetails.course?.title || "Unknown"}</p>
           <p>Year: {instanceDetails.year}</p>

@@ -39,13 +39,13 @@ const ListCourses = () => {
       {/* <h2>Courses</h2> */}
       <button
         onClick={fetchCourses}
-        className="bg-blue-600 text-white text-sm font-semibold p-1 rounded-sm px-3 mx-2 my-2"
+        className="bg-blue-600 text-white text-sm font-semibold p-1 rounded-sm px-3 mx-2 mt-5 hover:bg-blue-400"
       >
         List Courses
       </button>
 
       {courses.length > 0 && (
-        <table border="1" className=" w-[90%] mx-auto">
+        <table border="1" className=" w-[90%] mx-auto my-2">
           <thead className="">
             <tr className="bg-blue-500 text-white shadow-xl">
               <th className="md:w-[70%] p-1 pl-3 text-start">Course Title</th>
@@ -80,7 +80,13 @@ const ListCourses = () => {
       )}
 
       {courseDetails && (
-        <div>
+        <div className="absolute z-50 md:left-[450px] flex flex-col items-start border border-gray-400 bg-white rounded-md shadow-lg p-4">
+          <button
+            className="text-white bg-red-600 p-1 rounded-md"
+            onClick={() => setCourseDetails(null)}
+          >
+            Close
+          </button>
           <h3>Course Details</h3>
           <p>Title: {courseDetails.title}</p>
           <p>Code: {courseDetails.code}</p>
